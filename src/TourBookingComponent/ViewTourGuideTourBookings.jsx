@@ -45,7 +45,7 @@ const ViewTourGuideTourBookings = () => {
 
   const retrieveAllTourBookings = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/tour/booking/fetch/guide-wise?tourGuideId=" +
+      "http://backend:8080/api/tour/booking/fetch/guide-wise?tourGuideId=" +
         guide.id
     );
     console.log(response.data);
