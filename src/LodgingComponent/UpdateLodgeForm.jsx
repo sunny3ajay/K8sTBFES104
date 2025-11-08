@@ -17,7 +17,7 @@ const UpdateLodgeForm = () => {
   const saveLodge = (e) => {
     let data = { id, type, description };
 
-    fetch("http://localhost:8080/api/lodge/update", {
+    fetch("http://backend:8080/api/lodge/update", {
       method: "PUT",
       headers: {
         Accept: "application/json",
