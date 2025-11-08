@@ -40,7 +40,7 @@ const ViewCustomerTourBookings = () => {
 
   const retrieveAllTourBookings = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/tour/booking/fetch/customer-wise?customerId=" +
+      "http://backend:8080/api/tour/booking/fetch/customer-wise?customerId=" +
         customer.id
     );
     console.log(response.data);
