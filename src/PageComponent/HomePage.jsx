@@ -22,7 +22,7 @@ const HomePage = () => {
 
   const retrieveAllLocations = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/location/fetch/all"
+      "http://backend:8080/api/location/fetch/all"
     );
     return response.data;
   };
@@ -64,7 +64,7 @@ const HomePage = () => {
 
   const retrieveAllEvents = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/tour/fetch/all/active"
+      "http://backend:8080/api/tour/fetch/all/active"
     );
     return response.data;
   };
@@ -72,7 +72,7 @@ const HomePage = () => {
   const searchEvents = async () => {
     if (eventName !== "") {
       const response = await axios.get(
-        "http://localhost:8080/api/tour/fetch/name-wise?tourName=" + eventName
+        "http://backend:8080/api/tour/fetch/name-wise?tourName=" + eventName
       );
 
       return response.data;
@@ -83,7 +83,7 @@ const HomePage = () => {
       eventToLocationId !== "0"
     ) {
       const response = await axios.get(
-        "http://localhost:8080/api/tour/fetch/location-wise?fromLocationId=" +
+        "http://backend:8080/api/tour/fetch/location-wise?fromLocationId=" +
           eventFromLocationId +
           "&toLocationId=" +
           eventToLocationId
