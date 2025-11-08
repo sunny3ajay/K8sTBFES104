@@ -45,7 +45,7 @@ const ViewAllTourBookings = () => {
 
   const retrieveAllTourBookings = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/tour/booking/fetch/all"
+      "http://backend:8080/api/tour/booking/fetch/all"
     );
     console.log(response.data);
     return response.data;
